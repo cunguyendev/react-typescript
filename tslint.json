@@ -1,5 +1,10 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+    "no-any": true,
+    "no-empty-interface": false,
+    "prefer-for-of": false,
+    "no-shadowed-variable": false,
+    "no-bitwise": false
   }
 }
