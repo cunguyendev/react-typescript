@@ -1,0 +1,28 @@
+.header {
+  max-width: 900px;
+  margin: 20px auto 20px;
+
+  &__brand {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: #495963;
+  }
+
+  .nav__items__item {
+    display: inline-block;
+    margin-right: 20px;
+
+    &:hover {
+      border-bottom: 2px solid #495963;
+    }
+
+    &--active {
+      border-bottom: 2px solid #eb277d;
+    }
+  }
+}

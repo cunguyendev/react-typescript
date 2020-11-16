@@ -1,0 +1,25 @@
+.text-paragragh {
+  margin-bottom: 3em;
+
+  &__title {
+    line-height: 35px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+  }
+
+  &__description {
+    margin: 40px 0;
+  }
+
+  &__cta {
+    .button {
+      background-color: #eb277d;
+      border-radius: 3px;
+      color: #fff;
+      display: inline-block;
+      padding: 13.33333px 20px;
+      text-decoration: none;
+    }
+  }
+}
