@@ -26,3 +26,8 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: $color-pink;
 }
+
+::selection {
+  background: $color-pink;
+  color: $color-white;
+}
