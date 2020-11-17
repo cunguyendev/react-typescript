@@ -3,14 +3,12 @@
   margin: 20px auto 20px;
 
   &__brand {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 18px;
+    @include type-title;
     margin-bottom: 20px;
   }
 
   a {
-    color: #495963;
+    color: $color-gray;
   }
 
   .nav__items__item {
@@ -18,11 +16,11 @@
     margin-right: 20px;
 
     &:hover {
-      border-bottom: 2px solid #495963;
+      border-bottom: 2px solid $color-gray;
     }
 
     &--active {
-      border-bottom: 2px solid #eb277d;
+      border-bottom: 2px solid $color-pink;
     }
   }
 }

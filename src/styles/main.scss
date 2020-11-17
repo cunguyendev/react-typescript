@@ -1,6 +1,10 @@
-@import './reset';
-@import './normalize';
-@import './fonts';
+@import './utils/reset';
+@import './utils/fonts';
+@import './utils/variables';
+@import './utils/breakpoints';
+@import './utils/normalize';
+@import './utils/type';
+@import './global';
 @import '../layouts/header';
 @import '../layouts/footer';
 @import '../layouts/wrapper';

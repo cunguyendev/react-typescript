@@ -1,5 +1,5 @@
 .footer {
-  background: #495963;
+  background: $color-gray;
   box-sizing: border-box;
   box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
   margin: 0 auto;
@@ -7,30 +7,42 @@
   padding: 20px 40px;
 
   &__content {
-    display: flex;
-    align-items: center;
+    @include sm {
+      display: flex;
+      align-items: center;
+    }
 
     &__brand {
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 18px;
-      width: 20%;
+      @include type-title;
+      text-align: center;
+
+      @include sm {
+        width: 50%;
+        display: flex;
+      }
     }
 
     .social {
-      width: 80%;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-around;
+
+      @include sm {
+        width: 50%;
+        justify-content: flex-end;
+      }
 
       &__item {
         display: inline-block;
-        margin-right: 20px;
+
+        @include sm {
+          margin-right: 20px;
+        }
       }
     }
   }
 
   a {
-    color: #fff;
+    color: $color-white;
     line-height: 35px;
   }
 }

@@ -5,7 +5,7 @@
     line-height: 35px;
     font-size: 32px;
     font-weight: 700;
-    color: #333;
+    color: $color-black;
   }
 
   &__description {
@@ -14,9 +14,9 @@
 
   &__cta {
     .button {
-      background-color: #eb277d;
+      background-color: $color-pink;
       border-radius: 3px;
-      color: #fff;
+      color: $color-white;
       display: inline-block;
       padding: 13.33333px 20px;
       text-decoration: none;
