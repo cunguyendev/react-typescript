@@ -3,6 +3,11 @@ import Header from './layouts/header';
 import Footer from './layouts/footer';
 import Wrapper from './layouts/wrapper';
 
+const theApp = {
+  name:  'Code Lab',
+  baseUrl: '/'
+}
+
 const navigationData = [
   {
     url: '/',
@@ -19,17 +24,25 @@ const navigationData = [
   }
 ]
 
-const theApp = {
-  name:  'Code Lab',
-  baseUrl: '/'
-}
+const socialData = [
+  {
+    host: 'https://www.facebook.com/',
+    username: 'facebookexample',
+    text: 'Facebook',
+  },
+  {
+    host: 'https://www.twitter.com/',
+    username: 'twitterexample',
+    text: 'Twitter',
+  },
+]
 
 const App = () => {
   return (
     <div className="App">
       <Header navigationData={navigationData} theApp={theApp}/>
       <Wrapper />
-      <Footer />
+      <Footer socialData={socialData} theApp={theApp}/>
     </div>
   );
 }

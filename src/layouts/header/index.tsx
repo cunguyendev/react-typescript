@@ -3,17 +3,17 @@ import React, { FunctionComponent } from 'react';
 interface Navigation {
   url: string,
   text: string,
-  active?:boolean
+  active?:boolean,
 }
 
 interface TheApp {
   name: string,
-  baseUrl: string
+  baseUrl: string,
 }
 
 interface HeaderProps {
   navigationData: Navigation[];
-  theApp: TheApp
+  theApp: TheApp;
 }
 
 const Header: FunctionComponent<HeaderProps> = ({navigationData, theApp}: HeaderProps) => {
