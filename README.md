@@ -1,10 +1,10 @@
-# Base app React with TypeScript
+# Code Lab theme
 
-Create a base app from React and TypeScript.
+This created from React and TypeScript
 
 Author: Cu Nguyen &lt;[cunguyen.dev@gmail.com](cnguyen.dev@gmail.com)&gt;
 
-Deploy to Netlify: [https://react-typescript-app.netlify.app/](https://react-typescript-app.netlify.app/)
+Deploy to Netlify: [https://codelab-react-typescript.netlify.app/](https://codelab-react-typescript.netlify.app/)
 
 ## Requirements
 
