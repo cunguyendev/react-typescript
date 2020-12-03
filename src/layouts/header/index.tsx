@@ -1,10 +1,5 @@
 import React, { FunctionComponent } from 'react';
-
-interface Navigation {
-  url: string,
-  text: string,
-  active?:boolean,
-}
+import styled from 'styled-components';
 
 interface TheApp {
   name: string,
@@ -12,27 +7,33 @@ interface TheApp {
 }
 
 interface HeaderProps {
-  navigationData: Navigation[];
   theApp: TheApp;
 }
 
-const Header: FunctionComponent<HeaderProps> = ({navigationData, theApp}: HeaderProps) => {
+const MainHeader = styled.div`
+  max-width: 900px;
+  margin: 20px auto 20px;
+`;
+
+const HeaderBrand = styled.h1`
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-bottom: 20px;
+`;
+
+const Link = styled.a`
+  color: #495963;
+`;
+
+const Header: FunctionComponent<HeaderProps> = ({theApp}: HeaderProps) => {
   return (
-    <div className="header">
-      <h1 className="header__brand"><a href={theApp.baseUrl}>{theApp.name}</a></h1>
-      <div className="nav">
-        <ul className="nav__items">
-          {navigationData.map(navigation => {
-            return (
-              <li key={navigation.text} className={`nav__items__item ${navigation.active && 'nav__items__item--active'}`}>
-                <a href={navigation.url}>{navigation.text}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </div>
+    <MainHeader>
+      <HeaderBrand>
+        <Link href={theApp.baseUrl}>{theApp.name}</Link>
+      </HeaderBrand>
+    </MainHeader>
   );
 }
 
-export default Header;
+export default React.memo(Header);

@@ -1,50 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './layouts/header';
-import Footer from './layouts/footer';
 import Wrapper from './layouts/wrapper';
+import styled from 'styled-components';
 
 const theApp = {
   name:  'Code Lab',
   baseUrl: '/'
 }
 
-const navigationData = [
-  {
-    url: '/',
-    text: 'Home',
-    active: true
-  },
-  {
-    url: '/about/',
-    text: 'About'
-  },
-  {
-    url: '/projects/',
-    text: 'Projects'
-  }
-]
+const Layout = styled.div``;
 
-const socialData = [
-  {
-    host: 'https://www.facebook.com/',
-    username: 'facebookexample',
-    text: 'Facebook',
-  },
-  {
-    host: 'https://www.twitter.com/',
-    username: 'twitterexample',
-    text: 'Twitter',
-  },
-]
+type ContextProps = {
+  authenticated: boolean,
+  action: (status: boolean) => void,
+};
+
+export const AppContext = React.createContext<Partial<ContextProps>>({});
 
 const App = () => {
+  const [loginStatus, updateLoginStatus] = useState(false);
+
   return (
-    <div className="App">
-      <Header navigationData={navigationData} theApp={theApp}/>
-      <Wrapper />
-      <Footer socialData={socialData} theApp={theApp}/>
-    </div>
+    <AppContext.Provider value={{
+      authenticated: loginStatus,
+      action: updateLoginStatus,
+      }}>
+      <Layout>
+        <Header theApp={theApp}/>
+        <Wrapper />
+      </Layout>
+    </AppContext.Provider>
   );
 }
 
-export default App;
+export default React.memo(App);

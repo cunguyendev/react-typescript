@@ -10,17 +10,4 @@
   a {
     color: $color-gray;
   }
-
-  .nav__items__item {
-    display: inline-block;
-    margin-right: 20px;
-
-    &:hover {
-      border-bottom: 2px solid $color-gray;
-    }
-
-    &--active {
-      border-bottom: 2px solid $color-pink;
-    }
-  }
 }
