@@ -1,15 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import styled from 'styled-components';
 
-interface TheApp {
-  name: string,
-  baseUrl: string,
-}
-
-interface HeaderProps {
-  theApp: TheApp;
-}
-
 const MainHeader = styled.div`
   max-width: 900px;
   margin: 20px auto 20px;
@@ -25,6 +16,15 @@ const HeaderBrand = styled.h1`
 const Link = styled.a`
   color: #495963;
 `;
+
+interface TheApp {
+  name: string,
+  baseUrl: string,
+}
+
+interface HeaderProps {
+  theApp: TheApp;
+}
 
 const Header: FunctionComponent<HeaderProps> = ({theApp}: HeaderProps) => {
   return (

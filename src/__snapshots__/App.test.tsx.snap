@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading component Test snapshot 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "action": [Function],
+      "authenticated": false,
+    }
+  }
+>
+  <styled.div>
+    <Memo(Header)
+      theApp={
+        Object {
+          "baseUrl": "/",
+          "name": "Code Lab",
+        }
+      }
+    />
+    <Memo(Wrapper) />
+  </styled.div>
+</ContextProvider>
+`;
