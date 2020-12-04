@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  font-family: 'Google Sans Display';
+  background: #efefef;
+  color: #333;
+  line-height: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #495963;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #eb277d;
+}
+
+::selection {
+  background: #eb277d;
+  color: #fff;
+}
