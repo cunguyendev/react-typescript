@@ -4,25 +4,25 @@ import Footer from './layouts/footer';
 import Wrapper from './layouts/wrapper';
 
 const theApp = {
-  name:  'Code Lab',
-  baseUrl: '/'
-}
+  name: 'Code Lab',
+  baseUrl: '/',
+};
 
 const navigationData = [
   {
     url: '/',
     text: 'Home',
-    active: true
+    active: true,
   },
   {
     url: '/about/',
-    text: 'About'
+    text: 'About',
   },
   {
     url: '/projects/',
-    text: 'Projects'
-  }
-]
+    text: 'Projects',
+  },
+];
 
 const socialData = [
   {
@@ -35,16 +35,16 @@ const socialData = [
     username: 'twitterexample',
     text: 'Twitter',
   },
-]
+];
 
 const App = () => {
   return (
     <div className="App">
-      <Header navigationData={navigationData} theApp={theApp}/>
+      <Header navigationData={navigationData} theApp={theApp} />
       <Wrapper />
-      <Footer socialData={socialData} theApp={theApp}/>
+      <Footer socialData={socialData} theApp={theApp} />
     </div>
   );
-}
+};
 
 export default App;
