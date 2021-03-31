@@ -1,14 +1,14 @@
 import React, { FunctionComponent } from 'react';
 
 interface Navigation {
-  url: string,
-  text: string,
-  active?:boolean,
+  url: string;
+  text: string;
+  active?: boolean;
 }
 
 interface TheApp {
-  name: string,
-  baseUrl: string,
+  name: string;
+  baseUrl: string;
 }
 
 interface HeaderProps {
@@ -16,15 +16,25 @@ interface HeaderProps {
   theApp: TheApp;
 }
 
-const Header: FunctionComponent<HeaderProps> = ({navigationData, theApp}: HeaderProps) => {
+const Header: FunctionComponent<HeaderProps> = ({
+  navigationData,
+  theApp,
+}: HeaderProps) => {
   return (
     <div className="header">
-      <h1 className="header__brand"><a href={theApp.baseUrl}>{theApp.name}</a></h1>
+      <h1 className="header__brand">
+        <a href={theApp.baseUrl}>{theApp.name}</a>
+      </h1>
       <div className="nav">
         <ul className="nav__items">
-          {navigationData.map(navigation => {
+          {navigationData.map((navigation) => {
             return (
-              <li key={navigation.text} className={`nav__items__item ${navigation.active && 'nav__items__item--active'}`}>
+              <li
+                key={navigation.text}
+                className={`nav__items__item ${
+                  navigation.active && 'nav__items__item--active'
+                }`}
+              >
                 <a href={navigation.url}>{navigation.text}</a>
               </li>
             );
@@ -33,6 +43,6 @@ const Header: FunctionComponent<HeaderProps> = ({navigationData, theApp}: Header
       </div>
     </div>
   );
-}
+};
 
 export default Header;
